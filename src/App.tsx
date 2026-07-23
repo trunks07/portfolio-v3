@@ -80,7 +80,7 @@ const PROJECTS = [
     overview: "Designed and developed an AI-powered e-commerce platform for Universal Statues combining customer support, marketing automation, and AI-generated content into a unified cloud-native ecosystem with multiple serverless AI microservices.",
     solution: "Designed the overall AI architecture using FastAPI microservices deployed on AWS Lambda. Built a context-aware AI chatbot using LangChain and LangGraph, implemented RAG using MongoDB Atlas Vector Search, and integrated OpenAI and Google AI services.",
     tech: ["Python", "FastAPI", "AWS Lambda", "AWS SAM", "LangChain", "LangGraph", "LangSmith", "MongoDB Atlas", "OpenAI API", "Google AI Studio", "VoyageAI"],
-    url: "https://universalstatues.com",
+    url: "https://universalstatues-us.com",
   },
   {
     id: 2,
