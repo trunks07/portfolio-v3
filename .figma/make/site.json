@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a professional portfolio highlighting skills, projects, and experience to attract potential employers and clients effectively.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
