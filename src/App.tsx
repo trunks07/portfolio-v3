@@ -745,7 +745,7 @@ export default function App() {
               </span>
             </h2>
             <p className="text-[#6b6b80] text-lg mb-10 max-w-lg mx-auto">
-              Open to senior backend, AI engineering, or technical leadership roles. Let's connect.
+              Open to Senior Backend, AI Engineering, or Technical Leadership roles. Let's connect.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
