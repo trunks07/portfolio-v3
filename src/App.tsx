@@ -30,11 +30,11 @@ const EXPERIENCE = [
     period: "Dec 2024 – Present",
     location: "Angeles, Pampanga",
     highlights: [
-      "Led cross-functional team (2 Frontend, 2 Backend, 1 QA) using Agile/Scrum, modernising legacy monolithic systems into distributed microservices using FastAPI and Laravel.",
       "Architected production-grade GenAI RAG platform integrating OpenAI LLMs and MongoDB Vector Search — implementing embedding generation, vector indexing, and semantic search for factory data analysis.",
       "Built Agentic AI workflows using LangChain and LangGraph automating e-commerce client onboarding, reducing manual customer service workloads by ~70%.",
-      "Developed AI-powered marketing agent system generating interactive brochures and automating outbound email campaigns to 127,000+ leads.",
       "Spearheaded AWS Serverless cloud modernisation using Bref, reducing infrastructure costs to ~USD 30/month.",
+      "Led cross-functional team (2 Frontend, 2 Backend, 1 QA) using Agile/Scrum, modernising legacy monolithic systems into distributed microservices using FastAPI and Laravel.",
+      "Developed AI-powered marketing agent system generating interactive brochures and automating outbound email campaigns to 127,000+ leads.",
     ],
   },
   {
@@ -454,7 +454,7 @@ export default function App() {
                 <Terminal size={14} />
                 <span>Senior Backend Engineer</span>
                 <span className="text-violet-500/50">|</span>
-                <span>GenAI · Agentic AI · RAG</span>
+                <span>Building AI Platforms & Cloud Architectures</span>
                 <span className="text-violet-500/50">|</span>
                 <span>FastAPI · AWS</span>
               </div>
@@ -517,7 +517,7 @@ export default function App() {
                   { label: "AI Projects Built", value: "8+", icon: Bot },
                   { label: "Team Size Led", value: "5", icon: Users },
                   { label: "Leads Reached", value: "127K+", icon: Mail },
-                  { label: "Cost Reduction", value: "~$30/mo", icon: Cloud },
+                  { label: "Cost Reduction", value: "Reduced 90%", icon: Cloud },
                 ].map(({ label, value, icon: Icon }) => (
                   <div key={label} className="flex items-center justify-between py-2.5 border-b border-[#1a1a28] last:border-0">
                     <div className="flex items-center gap-2">
