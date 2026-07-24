@@ -434,7 +434,7 @@ export default function App() {
 
       {/* ── Hero ── */}
       <section ref={heroRef} id="about" className="relative min-h-screen flex items-center pt-16">
-        <div className="max-w-6xl mx-auto px-6 w-full py-24">
+        <div className="max-w-6xl mx-auto px-6 w-full py-12 sm:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 items-start">
             <div>
               {/* Status badge */}
@@ -450,12 +450,12 @@ export default function App() {
                 </span>
               </h1>
 
-              <div className="font-mono text-sm text-[#8b7fc8] mb-6 flex items-center gap-2">
-                <Terminal size={14} />
+              <div className="font-mono text-sm text-[#8b7fc8] mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+                <Terminal size={14} className="shrink-0" />
                 <span>Senior Backend Engineer</span>
-                <span className="text-violet-500/50">|</span>
-                <span>Building AI Platforms & Cloud Architectures</span>
-                <span className="text-violet-500/50">|</span>
+                <span className="text-violet-500/50 hidden sm:inline">|</span>
+                <span className="w-full sm:w-auto">Building AI Platforms & Cloud Architectures</span>
+                <span className="text-violet-500/50 hidden sm:inline">|</span>
                 <span>FastAPI · AWS</span>
               </div>
 
@@ -466,10 +466,10 @@ export default function App() {
                 <strong className="text-violet-300 font-semibold"> Agentic AI workflows</strong> that automate business processes.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10">
                 <a
                   href="mailto:carloguevarra454@gmail.com"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90"
                   style={{ background: "linear-gradient(135deg, #7c3aed, #6d28d9)", boxShadow: "0 0 24px rgba(124,58,237,0.3)" }}
                 >
                   <Mail size={15} />
@@ -479,7 +479,7 @@ export default function App() {
                   href="https://linkedin.com/in/carloguevarra-58b694183"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[#c4c4d4] border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[#c4c4d4] border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
                 >
                   <Link2 size={15} />
                   LinkedIn
@@ -488,20 +488,20 @@ export default function App() {
                   href="/files/CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[#c4c4d4] border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[#c4c4d4] border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
                 >
                   <FileBadge size={15} />
                   Download CV
                 </a>
               </div>
 
-              <div className="flex flex-wrap gap-5 text-sm text-[#6b6b80]">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-5 text-sm text-[#6b6b80]">
                 <span className="flex items-center gap-1.5">
-                  <MapPin size={13} className="text-violet-400" />
-                  32 Sitio Centro 2, Colgante, Apalit, Pampanga 2016
+                  <MapPin size={13} className="text-violet-400 shrink-0" />
+                  <span>Apalit, Pampanga, Philippines</span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Phone size={13} className="text-violet-400" />
+                  <Phone size={13} className="text-violet-400 shrink-0" />
                   +63 942 734 6600
                 </span>
               </div>
@@ -517,7 +517,7 @@ export default function App() {
                   { label: "AI Projects Built", value: "8+", icon: Bot },
                   { label: "Team Size Led", value: "5", icon: Users },
                   { label: "Leads Reached", value: "127K+", icon: Mail },
-                  { label: "Cost Reduction", value: "Reduced 90%", icon: Cloud },
+                  { label: "Cost Reduction", value: "~90%", icon: Cloud },
                 ].map(({ label, value, icon: Icon }) => (
                   <div key={label} className="flex items-center justify-between py-2.5 border-b border-[#1a1a28] last:border-0">
                     <div className="flex items-center gap-2">
@@ -565,9 +565,9 @@ export default function App() {
                     <div>
                       <div className="font-display font-semibold text-white text-base mb-1">{exp.role}</div>
                       <div className="font-medium text-violet-400 text-sm mb-1">{exp.company}</div>
-                      <div className="flex items-center gap-3 text-xs text-[#6b6b80] font-mono">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-[#6b6b80] font-mono">
                         <span>{exp.period}</span>
-                        <span>·</span>
+                        <span className="hidden sm:inline">·</span>
                         <span>{exp.location}</span>
                       </div>
                     </div>
@@ -737,43 +737,47 @@ export default function App() {
         <SectionLabel>Contact</SectionLabel>
 
         <div className="rounded-2xl border border-[#1e1e2e] bg-[#0f0f16] overflow-hidden">
-          <div className="p-10 md:p-16 text-center">
-            <h2 className="font-display font-black text-4xl md:text-5xl text-white mb-4 leading-tight">
+          <div className="p-8 sm:p-10 md:p-16 text-center">
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white mb-4 leading-tight">
               Let's build something<br />
               <span style={{ background: "linear-gradient(135deg, #8b5cf6, #6366f1)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                 intelligent
               </span>
             </h2>
-            <p className="text-[#6b6b80] text-lg mb-10 max-w-lg mx-auto">
+            <p className="text-[#6b6b80] text-base sm:text-lg mb-10 max-w-lg mx-auto">
               Open to Senior Backend, AI Engineering, or Technical Leadership roles. Let's connect.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <a
                 href="mailto:carloguevarra454@gmail.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold transition-all hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-white font-semibold transition-all hover:opacity-90 text-sm sm:text-base"
                 style={{ background: "linear-gradient(135deg, #7c3aed, #6d28d9)", boxShadow: "0 0 32px rgba(124,58,237,0.25)" }}
               >
                 <Mail size={16} />
-                carloguevarra454@gmail.com
+                <span className="truncate">carloguevarra454@gmail.com</span>
               </a>
               <a
                 href="https://linkedin.com/in/carloguevarra-58b694183"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-[#c4c4d4] font-semibold border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-[#c4c4d4] font-semibold border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
               >
                 <Link2 size={16} />
                 LinkedIn Profile
               </a>
             </div>
 
-            <div className="flex items-center justify-center gap-2 text-sm text-[#6b6b80]">
-              <Phone size={13} className="text-violet-400" />
-              <span>+63 942 734 6600</span>
-              <span className="text-[#2a2a40] mx-2">·</span>
-              <MapPin size={13} className="text-violet-400" />
-              <span>32 Sitio Centro 2, Colgante, Apalit, Pampanga 2016</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 text-sm text-[#6b6b80]">
+              <span className="flex items-center gap-2">
+                <Phone size={13} className="text-violet-400" />
+                +63 942 734 6600
+              </span>
+              <span className="text-[#2a2a40] mx-3 hidden sm:inline">·</span>
+              <span className="flex items-center gap-2">
+                <MapPin size={13} className="text-violet-400" />
+                Apalit, Pampanga, Philippines
+              </span>
             </div>
           </div>
         </div>
