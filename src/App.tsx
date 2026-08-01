@@ -6,6 +6,7 @@ import {
 } from "lucide-react"
 import { clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import { Analytics } from "@vercel/analytics/react"
 
 function cn(...inputs: Parameters<typeof clsx>) {
   return twMerge(clsx(inputs))
@@ -359,6 +360,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen" style={{ background: "var(--background)", color: "var(--foreground)" }}>
+      <Analytics />
 
       {/* ── Ambient background ── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
