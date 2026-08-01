@@ -478,7 +478,7 @@ export default function App() {
                   Get In Touch
                 </a>
                 <a
-                  href="https://linkedin.com/in/carloguevarra-58b694183"
+                  href="https://www.linkedin.com/in/carlo-guevarra-58b694183/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-[#c4c4d4] border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
@@ -760,7 +760,7 @@ export default function App() {
                 <span className="truncate">carloguevarra454@gmail.com</span>
               </a>
               <a
-                href="https://linkedin.com/in/carloguevarra-58b694183"
+                href="https://www.linkedin.com/in/carlo-guevarra-58b694183/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-[#c4c4d4] font-semibold border border-[#1e1e2e] hover:border-violet-500/40 hover:text-white transition-all"
